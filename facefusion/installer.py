@@ -73,4 +73,4 @@ def run(program : ArgumentParser) -> None:
 
 	onnxruntime_name, onnxruntime_version = ONNXRUNTIME_SET.get(args.onnxruntime)
 	commands.append(onnxruntime_name + '==' + onnxruntime_version)
-	subprocess.call(commands)
+	sys.exit(subprocess.call(commands))
